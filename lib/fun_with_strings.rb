@@ -1,7 +1,7 @@
 module FunWithStrings
   def palindrome?
     s = self.gsub(/\W+/,"")
-    return s.reverse.downcase == s.downcase
+    s.reverse.downcase == s.downcase
   end
   def count_words
     self.strip.split(/\W+/).inject(Hash.new(0)){|hash,word|hash[word.downcase]+=1;hash}
